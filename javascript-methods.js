@@ -12,7 +12,7 @@ In this Assignment, we use the prototype constructor to add new methods to the A
 // MAP //
 Array.prototype.myMap = function(callbackFn) {
   // Place your code here.
-  let map1 =[] // creating empty array called map1
+  let map1 = [] // creating empty array called map1
   for (let i = 0; i < this.length; i++) //loop through the array "this" to access each element
   {
     map1.push(callbackFn(this[i], i, this)) //executing the callback function on each of those elements
@@ -23,6 +23,15 @@ Array.prototype.myMap = function(callbackFn) {
 // FILTER //
 Array.prototype.myFilter = function(callbackFn) {
   // Place your code here.
+  let filter1 = []
+  for (let i = 0; i < this.length; i++) //loops through array
+  {
+    if(callbackFn(this[i], i, this) === True) //checks to see if the element passes the test from the callbackFn
+    {
+      filter1.push(this[i]) //if the element passes the test it is then pushed into the new array
+    }
+  }
+  return filter1;
 };
 
 // SOME //
