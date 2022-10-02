@@ -81,14 +81,21 @@ Array.prototype.myIncludes = function(searchElement) {
     }
   }
   return false;
-  
-  //return false if not found
-
 };
 
 // INDEXOF //
 Array.prototype.myIndexOf = function(searchElement) {
   // Place your code here.
+  //The first index of the element in the array; -1 if not found
+  //loop through array
+  for (let i = 0; i < this.length; i++)
+  {
+    if(this[i]===searchElement) //checks if the elemtent in the array is equal to the element being searched
+    {
+      return i;//returns element
+    }
+  }
+  return -1;
 };
 
 // LASTINDEXOF //
