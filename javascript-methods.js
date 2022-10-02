@@ -127,4 +127,11 @@ Object.myKeys = function(object) {
 // VALUES //
 Object.myValues = function(object) {
   // Place your code here.
+  let values=[]
+  //loop through object
+  for(let key in object)
+  {
+    values.push(object[key]) //take values from object and push into new array
+  }
+  return values;
 };
