@@ -26,7 +26,7 @@ Array.prototype.myFilter = function(callbackFn) {
   let filter1 = []
   for (let i = 0; i < this.length; i++) //loops through array
   {
-    if(callbackFn(this[i], i, this) === True) //checks to see if the element passes the test from the callbackFn
+    if(callbackFn(this[i], i, this) === true) //checks to see if the element passes the test from the callbackFn
     {
       filter1.push(this[i]) //if the element passes the test it is then pushed into the new array
     }
@@ -37,6 +37,16 @@ Array.prototype.myFilter = function(callbackFn) {
 // SOME //
 Array.prototype.mySome = function(callbackFn) {
   // Place your code here.
+  //true if the callback function returns a truthy value for at least one element in the array. Otherwise, false.
+  //loop through the array
+  for (let i = 0; i < this.length; i++)
+  {
+    if(callbackFn(this[i], i, this) === true)//checks if any one of the elements returns true
+    {
+      return true;
+    }
+  }
+  return false;
 };
 
 // EVERY //
