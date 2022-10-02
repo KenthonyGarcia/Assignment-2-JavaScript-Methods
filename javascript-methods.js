@@ -101,6 +101,15 @@ Array.prototype.myIndexOf = function(searchElement) {
 // LASTINDEXOF //
 Array.prototype.myLastIndexOf = function(searchElement) {
   // Place your code here.
+  //The last index of the element in the array; -1 if not found.
+  for (let i = this.length-1; i > -1; i--) //looping the array in from the last element
+  {
+    if(this[i]===searchElement) //checks if the elemtent in the array is equal to the element being searched
+    {
+      return i;//returns element
+    }
+  }
+  return -1;
 };
 
 // KEYS //
