@@ -52,6 +52,16 @@ Array.prototype.mySome = function(callbackFn) {
 // EVERY //
 Array.prototype.myEvery = function(callbackFn) {
   // Place your code here.
+  //true if the callbackFn function returns a truthy value for every array element. Otherwise, false.
+  //loop through the array
+  for (let i = 0; i < this.length; i++)
+  {
+    if(callbackFn(this[i], i, this) != true)//check if all values return true if one value is not true then the method returns false
+    {
+      return false;
+    }
+  }
+  return true;
 };
 
 // REDUCE //
