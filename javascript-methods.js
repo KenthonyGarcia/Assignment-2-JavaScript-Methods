@@ -12,10 +12,10 @@ In this Assignment, we use the prototype constructor to add new methods to the A
 // MAP //
 Array.prototype.myMap = function(callbackFn) {
   // Place your code here.
-  let map1 = [] // creating empty array called map1
+  let map1 = []; // creating empty array called map1
   for (let i = 0; i < this.length; i++) //loop through the array "this" to access each element
   {
-    map1.push(callbackFn(this[i], i, this)) //executing the callback function on each of those elements
+    map1.push(callbackFn(this[i], i, this)); //executing the callback function on each of those elements
   }
   return map1; //returning the new array
 };
@@ -23,12 +23,12 @@ Array.prototype.myMap = function(callbackFn) {
 // FILTER //
 Array.prototype.myFilter = function(callbackFn) {
   // Place your code here.
-  let filter1 = []
+  let filter1 = [];
   for (let i = 0; i < this.length; i++) //loops through array
   {
     if(callbackFn(this[i], i, this) === true) //checks to see if the element passes the test from the callbackFn
     {
-      filter1.push(this[i]) //if the element passes the test it is then pushed into the new array
+      filter1.push(this[i]); //if the element passes the test it is then pushed into the new array
     }
   }
   return filter1;
@@ -72,7 +72,7 @@ Array.prototype.myReduce = function(callbackFn) {
   let reduce1 = 0;
   for (let i = 0; i < this.length; i++)
   {
-    reduce1 = callbackFn(this[i], i, this)//run reducer callback function on each element
+    reduce1 = callbackFn(this[i], i, this);//run reducer callback function on each element
   }
   return reduce1;
 };
@@ -127,7 +127,7 @@ Object.myKeys = function(object) {
   //loop through object
   for(let key in object)
   {
-    keys.push(key) //take keys from object and push into new array
+    keys.push(key); //take keys from object and push into new array
   }
   return keys;
 };
@@ -139,7 +139,7 @@ Object.myValues = function(object) {
   //loop through object
   for(let key in object)
   {
-    values.push(object[key]) //take values from object and push into new array
+    values.push(object[key]); //take values from object and push into new array
   }
   return values;
 };
