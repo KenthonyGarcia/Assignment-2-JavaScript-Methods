@@ -72,6 +72,18 @@ Array.prototype.myReduce = function(callbackFn) {
 // INCLUDES //
 Array.prototype.myIncludes = function(searchElement) {
   // Place your code here.
+  //loop through array
+  for (let i = 0; i < this.length; i++)
+  {
+    if(this[i] === searchElement)//check if serchelement is within the array if found return true
+    {
+      return true;
+    }
+  }
+  return false;
+  
+  //return false if not found
+
 };
 
 // INDEXOF //
